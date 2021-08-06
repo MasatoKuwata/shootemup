@@ -1,3 +1,6 @@
 #include "HomingShot.h"
 
-HomingShot::HomingShot():trail(*this)
+HomingShot::HomingShot() : trail(*this)
+{
+
+}

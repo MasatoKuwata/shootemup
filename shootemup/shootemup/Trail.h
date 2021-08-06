@@ -1,18 +1,20 @@
 #pragma once
+#include<list>
 #include "Geometry.h"
-#include <list>
+struct HomingShot;
 
-class HomingShot;//(—š—ğ‚Ì)‚¿å
-
-//‹OÕ
+// ‹OÕƒNƒ‰ƒX
 class Trail
 {
+private:
+	int handle_;
+	HomingShot& owner_;
+	std::list<Position2>history_;		// êŠ—š—ğ
 public:
-	Trail(HomingShot& hom);
+	Trail(HomingShot& owner);
+	void SetHandle(int hanble);
 	void Update();
 	void Draw();
-
-private:
-	std::list<Position2> homingPositions_;
-	HomingShot& homing_;
+	void Clear();
 };
+
